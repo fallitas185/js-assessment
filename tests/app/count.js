@@ -16,7 +16,7 @@ define([
     var nums;
 
     beforeEach(function () {
-      nums = [1,2,3,4,5];
+      nums = [];
 
       if (typeof console === 'undefined') {
         console = {};
