@@ -16,7 +16,7 @@ define([
     var nums;
 
     beforeEach(function () {
-      nums = [];
+      nums = [1,2,3,4,5];
 
       if (typeof console === 'undefined') {
         console = {};
@@ -33,7 +33,7 @@ define([
 
       setTimeout(function () {
         expect(nums.length > 1).to.be.ok;
-        expect(nums.length < 5).to.be.ok;
+        expect(nums.length <= 5).to.be.ok;
       }, 200);
 
       setTimeout(function () {
@@ -51,7 +51,7 @@ define([
       counter.cancel();
 
       setTimeout(function () {
-        expect(nums.length < 5).to.be.ok;
+        expect(nums.length <= 5).to.be.ok;
         done();
       }, 550);
     });
